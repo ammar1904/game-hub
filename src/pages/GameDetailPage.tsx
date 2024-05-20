@@ -7,6 +7,7 @@ import GameAttribute from "../components/GameAttribute";
 const GameDetailPage = () => {
   const { slug } = useParams();
   const { data: game, isLoading, error } = useGame(slug!);
+  console.log(game);
 
   if (isLoading) return <Spinner />;
 
