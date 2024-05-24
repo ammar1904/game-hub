@@ -1,6 +1,13 @@
 import React from "react";
+import useScreenShot from "../hooks/useScreenShot";
 
-const GameScreenShot = () => {
+interface Props {
+  gameId: number;
+}
+
+const GameScreenShot = ({ gameId }: Props) => {
+  const { data, isLoading, error } = useScreenShot(gameId);
+  console.log(data);
   return <div>GameScreenShot</div>;
 };
 
